@@ -13,8 +13,10 @@
 
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-		<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
 		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+		<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+		<link href="css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="css/style.css?v=4.1.0" rel="stylesheet">
 
@@ -24,49 +26,267 @@
 
 		<div class="wrapper wrapper-content">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-3">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>代理列表</h5>
+							<div class="ibox-tools">
+								<a class="collapse-link">
+									<i class="fa fa-chevron-up"></i>
+								</a>
+								<a class="close-link">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+							<small>（点击对应代理，右侧视图数据更新）</small>
+						</div>
+						<div class="ibox-content">
+							<div id="using_json"></div>
 
-					<div class="middle-box text-center animated fadeInRightBig" style="margin-top: 0;">
-						<div class="alert alert-success alert-dismissable">
-						<button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button> 恭喜您注册A级代理商成功!
-						<br /> 帐号:123456789
-						<br /> 密码:789456123<br />
-						开户银行:阿斯达斯大神<br />
-						对公账户:123456789
+						</div>
 					</div>
-						<h3 class="font-bold">注册A级代理商</h3>
+				</div>
+				<div class="col-sm-9 animated fadeInDownBig">
+					<div class="row">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>代理信息</h5>
+							</div>
+							<div class="ibox-content">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="contact-box">
+											<a href="profile.html">
+												<div class="col-sm-4">
+													<div class="text-center">
+														<img alt="image" class="img-circle m-t-xs img-responsive" src="img/profile_small.jpg">
+														<div style="margin-top: 30px;">
+															<a class="btn btn-primary btn-outline btn-sm" href="">代理详情</a>
+														</div>
+														<!--<div class="m-t-xs font-bold">代理商老张</div>-->
+													</div>
+												</div>
+											</a>
+											<div class="col-sm-8">
+												<a href="profile.html">
+													<h3><strong>中酒老张</strong></h3>
+													<p>
+														<i class="fa fa-calendar"></i> 注册时间：2017-09-22
+													</p>
+													<p><i class="fa fa-male"></i>下级代理人数：24</p>
+												</a>
+												<address>
+                            							<i class="fa fa-bank"></i><strong>交通银行</strong><br>
+                            							<i class="fa fa-money"></i>1646565979789789<br>
+                            						<p>
+                            							<i class="fa fa-phone"></i>手机号:13938279155
+                            						</p>
+                        						</address>
+											</div>
+											<div class="clearfix"></div>
 
-						<form class="m-t" role="form" action="">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="请输入用户名" required="">
+										</div>
+									</div>
+									<div class="col-sm-5">
+										<div class="widget yellw-bg no-padding">
+											<div class="p-m" style="padding: 3px 20px;">
+												<h1 class="m-xs">&yen; 50,992</h1>
+
+												<h3 class="font-bold no-margins">
+                            总收益
+                        </h3>
+												<small>下级提成</small>
+											</div>
+											<div class="flot-chart">
+												<div class="flot-chart-content" id="flot-chart3"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+                <div class="widget lazur-bg no-padding">
+                    <div class="p-m" style="padding: 3px 20px;">
+                        <h1 class="m-xs">&yen; 10,660</h1>
+
+                        <h3 class="font-bold no-margins">
+                            总充值
+                        </h3>
+                        <small>总部订货</small>
+                    </div>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-chart2"></div>
+                    </div>
+                </div>
+            </div>
+								</div>
+
 							</div>
-							<div class="form-group">
-								<input type="password" class="form-control" placeholder="请输入密码" required="">
-							</div>
-							<div class="form-group">
-								<input type="password" class="form-control" placeholder="请再次输入密码" required="">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="请输入姓名" required="">
-							</div>
-							<div class="form-group">
-								<input type="number" class="form-control" placeholder="请输入手机号" required="">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="请输入开户银行" required="">
-							</div>
-							<div class="form-group">
-								<input type="number" class="form-control" placeholder="请输入对公账号" required="">
-							</div>
-							<div class="form-group text-left">
-								<div class="checkbox i-checks">
-									<label class="no-padding">
-                            <input type="checkbox" checked=""><i></i> 我同意注册协议</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row">
+
+							<div class="col-lg-12">
+								<div class="ibox float-e-margins">
+									<div class="ibox-title">
+										<h5>交易记录</h5>
+										<div class="ibox-tools">
+											<a class="collapse-link">
+												<i class="fa fa-chevron-up"></i>
+											</a>
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+												<i class="fa fa-wrench"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-user">
+												<li>
+													<a href="#">设置选项1</a>
+												</li>
+												<li>
+													<a href="#">设置选项2</a>
+												</li>
+											</ul>
+											<a class="close-link">
+												<i class="fa fa-times"></i>
+											</a>
+										</div>
+									</div>
+									<div class="ibox-content">
+										<div class="row">
+											<div class="col-sm-9 m-b-xs">
+												<div data-toggle="buttons" class="btn-group">
+													<label class="btn btn-sm btn-white">
+                                                    <input type="radio" id="option1" name="options">天</label>
+													<label class="btn btn-sm btn-white active">
+                                                    <input type="radio" id="option2" name="options">周</label>
+													<label class="btn btn-sm btn-white">
+                                                    <input type="radio" id="option3" name="options">月</label>
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="input-group">
+													<input type="text" placeholder="搜索" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary">搜索</button> </span>
+												</div>
+											</div>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>编号</th>
+														<th>金额</th>
+														<th>日期</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>5465</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-hourglass-2 text-warning"></i></td>
+														<td>
+															<span class="label label-danger">转账</span>
+														</td>
+													</tr>
+													<tr>
+														<td>5466</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.12</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-primary">提成</span>
+														</td>
+													</tr>
+													<tr>
+														<td>4564</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-danger">转账</span>
+														</td>
+													</tr>
+													<tr>
+														<td>5465</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-danger">转账</span>
+														</td>
+													</tr>
+													<tr>
+														<td>5465</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-primary">提成</span>
+														</td>
+													</tr>
+													<tr>
+														<td>5465</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-danger">转账</span>
+														</td>
+													</tr>
+													<tr>
+														<td>5465</td>
+														<td><span class="pie">5,000</span>
+														</td>
+														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>
+															<span class="label label-primary">提成</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+									</div>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
-						</form>
+
+						</div>
 					</div>
+
+					<div>
+
+					</div>
+					<!-- 表格 -->
+					<!--<div class="example-wrap animated fadeInRightBig">
+						<div class="example">
+							<div class="btn-group hidden-xs" id="exampleTableEventsToolbar" role="group">
+								<button type="button" class="btn btn-outline btn-default">
+                                        <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                                    </button>
+								<button type="button" class="btn btn-outline btn-default">
+                                        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                                    </button>
+								<button type="button" class="btn btn-outline btn-default">
+                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                    </button>
+							</div>
+							<table id="exampleTableEvents" data-height="400" data-mobile-responsive="true">
+								<thead>
+									<tr>
+										<th data-field="state" data-checkbox="true"></th>
+										<th data-field="id">推荐码</th>
+										<th data-field="name">姓名</th>
+										<th data-field="num">卡号</th>
+										<th data-field="date">注册日期</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>-->
+					<!-- End E -->
 				</div>
 			</div>
 		</div>
@@ -75,17 +295,259 @@
 		<script src="js/jquery.min.js?v=2.1.4"></script>
 		<script src="js/bootstrap.min.js?v=3.3.6"></script>
 
-		<!-- iCheck -->
-		<script src="js/plugins/iCheck/icheck.min.js"></script>
+		<!-- 自定义js -->
+		<script src="js/content.js?v=1.0.0"></script>
+
+		<!-- Jvectormap -->
+		<!--<script src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>-->
+
+		<!-- Bootstrap table -->
+		<script src="js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+		<script src="js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+		<script src="js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+
+		<!-- Peity -->
+		<script src="js/demo/bootstrap-table-demo.js"></script>
+
+		<!-- jsTree plugin javascript -->
+		<script src="js/plugins/jsTree/jstree.min.js"></script>
+
+		<!-- Flot -->
+		<script src="js/plugins/flot/jquery.flot.js"></script>
+		<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+		<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+
+		<style>
+			.jstree-open>.jstree-anchor>.fa-folder:before {
+				content: "\f07c";
+			}
+
+			.jstree-default .jstree-icon.none {
+				width: 0;
+			}
+		</style>
+
 		<script>
 			$(document).ready(function() {
-				$('.i-checks').iCheck({
-					checkboxClass: 'icheckbox_square-green',
-					radioClass: 'iradio_square-green',
+
+				$('#using_json').jstree({
+					'core': {
+						'data': [
+							'一级老张',
+							{
+								'text': '一级老王',
+								'state': {
+									'opened': true
+								},
+								'children': [{
+										'text': '二级老赵',
+										'children': [{
+												'text': '三级甲',
+												'icon': 'none'
+											},
+											{
+												'text': '三级乙',
+												'icon': 'none'
+											},
+											{
+												'text': '三级丙',
+												'icon': 'none'
+											},
+											{
+												'text': '三级丁',
+												'icon': 'none'
+											}
+										],
+										'state': {
+											'opened': true
+										}
+									},
+									{
+										'text': '二级老周',
+										'children': [{
+												'text': '三级甲',
+												'icon': 'none'
+											},
+											{
+												'text': '三级乙',
+												'icon': 'none'
+											},
+											{
+												'text': '三级丙',
+												'icon': 'none',
+												'children': [{
+														'text': '四级A',
+														'icon': 'none'
+													},
+													{
+														'text': '四级B',
+														'icon': 'none'
+													},
+													{
+														'text': '四级C',
+														'icon': 'none'
+													},
+													{
+														'text': '四级D',
+														'icon': 'none'
+													}
+												]
+											},
+											{
+												'text': '三级丁',
+												'icon': 'none'
+											}
+										],
+										'state': {
+											'opened': true
+										}
+									},
+									{
+										'text': '二级老齐',
+										'children': [{
+												'text': '三级甲',
+												'icon': 'none'
+											},
+											{
+												'text': '三级乙',
+												'icon': 'none'
+											},
+											{
+												'text': '三级丙',
+												'icon': 'none'
+											},
+											{
+												'text': '三级丁',
+												'icon': 'none'
+											},
+											{
+												'text': '三级A',
+												'icon': 'none'
+											}
+										],
+										'state': {
+											'opened': true
+										}
+									}
+								]
+							},
+							'一级老刘',
+							'一级老李',
+							'一级老孙',
+							'一级老吴',
+						]
+					}
 				});
+
+				var d1 = [
+					[1262304000000, 6],
+					[1264982400000, 3057],
+					[1267401600000, 20434],
+					[1270080000000, 31982],
+					[1272672000000, 26602],
+					[1275350400000, 27826],
+					[1277942400000, 24302],
+					[1280620800000, 24237],
+					[1283299200000, 21004],
+					[1285891200000, 12144],
+					[1288569600000, 10577],
+					[1291161600000, 10295]
+				];
+				var d2 = [
+					[1262304000000, 5],
+					[1264982400000, 200],
+					[1267401600000, 1605],
+					[1270080000000, 6129],
+					[1272672000000, 11643],
+					[1275350400000, 19055],
+					[1277942400000, 30062],
+					[1280620800000, 39197],
+					[1283299200000, 37000],
+					[1285891200000, 27000],
+					[1288569600000, 21000],
+					[1291161600000, 17000]
+				];
+var data2 = [
+                {
+                    label: "Data 1",
+                    data: d1,
+                    color: '#19a0a1'
+                }
+            ];
+            $.plot($("#flot-chart2"), data2, {
+                xaxis: {
+                    tickDecimals: 0
+                },
+                series: {
+                    lines: {
+                        show: true,
+                        fill: true,
+                        fillColor: {
+                            colors: [{
+                                opacity: 1
+                            }, {
+                                opacity: 1
+                            }]
+                        },
+                    },
+                    points: {
+                        width: 0.1,
+                        show: false
+                    },
+                },
+                grid: {
+                    show: false,
+                    borderWidth: 0
+                },
+                legend: {
+                    show: false,
+                }
+            });
+				var data3 = [{
+						label: "Data 1",
+						data: d1,
+						color: '#fbbe7b'
+					},
+					{
+						label: "Data 2",
+						data: d2,
+						color: '#f8ac59'
+					}
+				];
+
+				$.plot($("#flot-chart3"), data3, {
+					xaxis: {
+						tickDecimals: 0
+					},
+					series: {
+						lines: {
+							show: true,
+							fill: true,
+							fillColor: {
+								colors: [{
+									opacity: 1
+								}, {
+									opacity: 1
+								}]
+							},
+						},
+						points: {
+							width: 0.1,
+							show: false
+						},
+					},
+					grid: {
+						show: false,
+						borderWidth: 0
+					},
+					legend: {
+						show: false,
+					}
+				});
+
 			});
 		</script>
-
 	</body>
 
 </html>
