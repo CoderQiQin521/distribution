@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>中酒分销系统</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content animated fadeInRightBig">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>详情
+                    		</h5>
+                    		<a href="javascript:history.back(-1)" class="btn btn-warning btn-xs pull-right">返回</a>
+							<div class="ibox-tools">
+								<a class="collapse-link">
+									<i class="fa fa-chevron-up"></i>
+								</a>
+								<a class="close-link">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+						</div>
+						<div class="ibox-content">
+							<div class="row">
+								<div class="col-sm-3">
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="contact-box">
+														<a href="profile.html">
+															<div class="col-sm-4">
+																<div class="text-center"><img alt="image" class="img-circle m-t-xs img-responsive" src="img/profile_small.jpg">
+																	<div style="margin-top:30px"></div>
+																</div>
+															</div>
+														</a>
+														<div class="col-sm-12">
+															<a href="profile.html">
+																<h3><strong>中酒老张</strong></h3>
+																<p><i class="fa fa-calendar"></i> 注册时间：2017-09-22</p>
+																<p><i class="fa fa-male"></i>下级代理人数：24</p>
+															</a><address><i class="fa fa-bank"></i><strong>交通银行</strong><br><i class="fa fa-credit-card"></i>1646565979789789<br><p><i class="fa fa-phone"></i>手机号:13938279155</p></address></div>
+														<div class="clearfix"></div>
+													</div>
+												</div>
+												<div class="col-sm-12">
+													<div class="widget yellw-bg no-padding">
+														<div class="p-m" style="padding:3px 20px">
+															<h1 class="m-xs">¥ 50,992</h1>
+															<h3 class="font-bold no-margins">总收益</h3><small>下级提成</small></div>
+														<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-chart3"></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-12">
+													<div class="widget lazur-bg no-padding">
+														<div class="p-m" style="padding:3px 20px">
+															<h1 class="m-xs">¥ 10,660</h1>
+															<h3 class="font-bold no-margins">总充值</h3><small>总部订货</small></div>
+														<div class="flot-chart">
+															<div class="flot-chart-content" id="flot-chart2"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-9">
+											<img src="http://ozwpnu2pa.bkt.clouddn.com/p2.jpg" class="img-responsive">
+							<img src="http://ozwpnu2pa.bkt.clouddn.com/p2.jpg" class="img-responsive">
+										</div>
+							</div>
+							
+							<div class="hr-line-dashed"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 全局js -->
+		<script src="js/jquery.min.js?v=2.1.4"></script>
+		<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+		<!-- Flot -->
+		<script src="js/plugins/flot/jquery.flot.js"></script>
+		<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+		<script src="js/plugins/flot/jquery.flot.resize.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+				var d1 = [
+					[1262304000000, 6],
+					[1264982400000, 3057],
+					[1267401600000, 20434],
+					[1270080000000, 31982],
+					[1272672000000, 26602],
+					[1275350400000, 27826],
+					[1277942400000, 24302],
+					[1280620800000, 24237],
+					[1283299200000, 21004],
+					[1285891200000, 12144],
+					[1288569600000, 10577],
+					[1291161600000, 10295]
+				];
+				var d2 = [
+					[1262304000000, 5],
+					[1264982400000, 200],
+					[1267401600000, 1605],
+					[1270080000000, 6129],
+					[1272672000000, 11643],
+					[1275350400000, 19055],
+					[1277942400000, 30062],
+					[1280620800000, 39197],
+					[1283299200000, 37000],
+					[1285891200000, 27000],
+					[1288569600000, 21000],
+					[1291161600000, 17000]
+				];
+				var data2 = [{
+					label: "Data 1",
+					data: d1,
+					color: '#19a0a1'
+				}];
+				$.plot($("#flot-chart2"), data2, {
+					xaxis: {
+						tickDecimals: 0
+					},
+					series: {
+						lines: {
+							show: true,
+							fill: true,
+							fillColor: {
+								colors: [{
+									opacity: 1
+								}, {
+									opacity: 1
+								}]
+							},
+						},
+						points: {
+							width: 0.1,
+							show: false
+						},
+					},
+					grid: {
+						show: false,
+						borderWidth: 0
+					},
+					legend: {
+						show: false,
+					}
+				});
+				var data3 = [{
+						label: "Data 1",
+						data: d1,
+						color: '#fbbe7b'
+					},
+					{
+						label: "Data 2",
+						data: d2,
+						color: '#f8ac59'
+					}
+				];
+
+				$.plot($("#flot-chart3"), data3, {
+					xaxis: {
+						tickDecimals: 0
+					},
+					series: {
+						lines: {
+							show: true,
+							fill: true,
+							fillColor: {
+								colors: [{
+									opacity: 1
+								}, {
+									opacity: 1
+								}]
+							},
+						},
+						points: {
+							width: 0.1,
+							show: false
+						},
+					},
+					grid: {
+						show: false,
+						borderWidth: 0
+					},
+					legend: {
+						show: false,
+					}
+				});
+
+			});
+		</script>
+	</body>
+
+</html>
