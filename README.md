@@ -1,4 +1,4 @@
 # distribution
-中酒分销系统
-基于H5响应式开发
-by 朵朵科技
+中酒分销OA系统
+基于bootstrap响应式开发
+by CoderQiQin
