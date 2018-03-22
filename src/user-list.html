@@ -54,7 +54,7 @@
 							</div>
 							<div class="ibox-content">
 								<div class="row">
-									<div class="col-sm-4">
+									<div class="col-sm-3">
 										<div class="contact-box">
 											<a href="profile.html">
 												<div class="col-sm-4">
@@ -87,7 +87,7 @@
 
 										</div>
 									</div>
-									<div class="col-sm-5">
+									<div class="col-sm-3">
 										<div class="widget yellw-bg no-padding">
 											<div class="p-m" style="padding: 3px 20px;">
 												<h1 class="m-xs">&yen; 50,992</h1>
@@ -103,20 +103,35 @@
 										</div>
 									</div>
 									<div class="col-sm-3">
-                <div class="widget lazur-bg no-padding">
-                    <div class="p-m" style="padding: 3px 20px;">
-                        <h1 class="m-xs">&yen; 10,660</h1>
+										<div class="widget lazur-bg no-padding">
+											<div class="p-m" style="padding: 3px 20px;">
+												<h1 class="m-xs">&yen; 10,660</h1>
 
-                        <h3 class="font-bold no-margins">
+												<h3 class="font-bold no-margins">
+                            总奖励
+                        </h3>
+												<small>123</small>
+											</div>
+											<div class="flot-chart">
+												<div class="flot-chart-content" id="flot-chart1"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="widget lazur-bg no-padding">
+											<div class="p-m" style="padding: 3px 20px;">
+												<h1 class="m-xs">&yen; 10,660</h1>
+
+												<h3 class="font-bold no-margins">
                             总充值
                         </h3>
-                        <small>总部订货</small>
-                    </div>
-                    <div class="flot-chart">
-                        <div class="flot-chart-content" id="flot-chart2"></div>
-                    </div>
-                </div>
-            </div>
+												<small>总部订货</small>
+											</div>
+											<div class="flot-chart">
+												<div class="flot-chart-content" id="flot-chart2"></div>
+											</div>
+										</div>
+									</div>
 								</div>
 
 							</div>
@@ -194,7 +209,8 @@
 														<td>5466</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.12</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.12</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-primary">提成</span>
 														</td>
@@ -203,7 +219,8 @@
 														<td>4564</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-danger">转账</span>
 														</td>
@@ -212,7 +229,8 @@
 														<td>5465</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-danger">转账</span>
 														</td>
@@ -221,7 +239,8 @@
 														<td>5465</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-primary">提成</span>
 														</td>
@@ -230,7 +249,8 @@
 														<td>5465</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-danger">转账</span>
 														</td>
@@ -239,7 +259,8 @@
 														<td>5465</td>
 														<td><span class="pie">5,000</span>
 														</td>
-														<td>2014.11.11</td><td><i class="fa fa-check text-navy"></i></td>
+														<td>2014.11.11</td>
+														<td><i class="fa fa-check text-navy"></i></td>
 														<td>
 															<span class="label label-primary">提成</span>
 														</td>
@@ -322,7 +343,7 @@
 			.jstree-open>.jstree-anchor>.fa-folder:before {
 				content: "\f07c";
 			}
-
+			
 			.jstree-default .jstree-icon.none {
 				width: 0;
 			}
@@ -468,42 +489,69 @@
 					[1288569600000, 21000],
 					[1291161600000, 17000]
 				];
-var data2 = [
-                {
-                    label: "Data 1",
-                    data: d1,
-                    color: '#19a0a1'
-                }
-            ];
-            $.plot($("#flot-chart2"), data2, {
-                xaxis: {
-                    tickDecimals: 0
-                },
-                series: {
-                    lines: {
-                        show: true,
-                        fill: true,
-                        fillColor: {
-                            colors: [{
-                                opacity: 1
-                            }, {
-                                opacity: 1
-                            }]
-                        },
-                    },
-                    points: {
-                        width: 0.1,
-                        show: false
-                    },
-                },
-                grid: {
-                    show: false,
-                    borderWidth: 0
-                },
-                legend: {
-                    show: false,
-                }
-            });
+				var data2 = [{
+					label: "Data 1",
+					data: d1,
+					color: '#19a0a1'
+				}];
+				$.plot($("#flot-chart2"), data2, {
+					xaxis: {
+						tickDecimals: 0
+					},
+					series: {
+						lines: {
+							show: true,
+							fill: true,
+							fillColor: {
+								colors: [{
+									opacity: 1
+								}, {
+									opacity: 1
+								}]
+							},
+						},
+						points: {
+							width: 0.1,
+							show: false
+						},
+					},
+					grid: {
+						show: false,
+						borderWidth: 0
+					},
+					legend: {
+						show: false,
+					}
+				});
+				$.plot($("#flot-chart1"), data2, {
+					xaxis: {
+						tickDecimals: 0
+					},
+					series: {
+						lines: {
+							show: true,
+							fill: true,
+							fillColor: {
+								colors: [{
+									opacity: 1
+								}, {
+									opacity: 1
+								}]
+							},
+						},
+						points: {
+							width: 0.1,
+							show: false
+						},
+					},
+					grid: {
+						show: false,
+						borderWidth: 0
+					},
+					legend: {
+						show: false,
+					}
+				});
 				var data3 = [{
 						label: "Data 1",
 						data: d1,
